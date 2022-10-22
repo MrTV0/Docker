@@ -1,5 +1,6 @@
 from fastapi import FastAPI
-import platform, psutil
+import platform
+import psutil
 import datetime
 
 app = FastAPI()
