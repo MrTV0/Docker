@@ -3,7 +3,5 @@ WORKDIR /code
 EXPOSE 8000
 COPY ./requirements.txt /code/requirements.txt
 RUN pip install --no-cache-dir --upgrade -r /code/requirements.txt
-RUN pip3 install --upgrade pip
-RUN python3 -m pip install psutil
 COPY ./app /code/app
 CMD ["uvicorn", "app.randomizer:app", "--host", "0.0.0.0", "--port", "8000"]
