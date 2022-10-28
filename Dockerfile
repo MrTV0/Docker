@@ -1,4 +1,5 @@
-FROM ubuntu:latest
+FROM python:3.10.0-alpine
+RUN python -m pip install psutil
 WORKDIR /code
 EXPOSE 8000
 COPY ./requirements.txt /code/requirements.txt
