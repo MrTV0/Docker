@@ -1,6 +1,4 @@
-FROM python:3.10.0-alpine
-RUN apk add build-base linux-headers
-RUN python -m pip install psutil
+FROM ubuntu:latest
 WORKDIR /code
 EXPOSE 8000
 COPY ./requirements.txt /code/requirements.txt
